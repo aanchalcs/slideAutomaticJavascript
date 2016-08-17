@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<link rel='stylesheet' href='slide.css'>
+<body>
+
+<div class='slideshow-container'>
+<div class='mySlides fade'>
+<div class='numberText'>1 / 5</div>
+<img src='images/1.jpg' style='width:100%'>
+<div class='text'>A polar bear's fur is not white!!  It is hollow.  The fur reflects light.  The hollow fur also traps the suns heat to help keep the polar bear warm.</div>
+</div>
+
+<div class='mySlides fade'>
+<div class='numberText'>2 / 5</div>
+<img src='images/2.jpg' style='width:100%'>
+<div class='text'>Polar bear babies weigh a little more than a pound when they are born.</div>
+</div>
+
+<div class='mySlides fade'>
+<div class='numberText'>3 / 5</div>
+<img src='images/3.jpg' style='width:100%'>
+<div class='text'>When curled up, a polar bear may cover its muzzle (nose) with a paw to help conserve heat.</div>
+</div>
+
+<div class='mySlides fade'>
+<div class='numberText'>4 / 5</div>
+<img src='images/4.jpg' style='width:100%'>
+<div class='text'>Paw pads with rough surfaces help prevent polar bears from slipping up on the ice.</div>
+</div>
+
+<div class='mySlides fade'>
+<div class='numberText'>5 / 5</div>
+<img src='images/5.jpg' style='width:100%'>
+<div class='text'>Polar bears can swim up to 100 miles (161 kilometers at a time).  Polar bears can swim an average of 6 miles per hour.</div>
+</div>
+
+
+<a class='prev' onclick='plusSlides(-1)'>&#10094;</a>
+<a class='next' onclick='plusSlides(1)'>&#10095;</a>
+
+<script>
+
+//automatic slideshow
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+
+
+</script>
+
+</body>
+</html>
